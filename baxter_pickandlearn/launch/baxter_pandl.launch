@@ -1,0 +1,5 @@
+<!--gps.launch-->
+<launch>
+  <node name="pickandlearn" pkg="baxter_pickandlearn" type="pickandlearn" output="screen"/>
+
+</launch>
