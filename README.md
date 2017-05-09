@@ -18,7 +18,7 @@
  
 #### 3. You may now proceed to [Step 7](http://sdk.rethinkrobotics.com/wiki/Workstation_Setup) to verify your environment setup.
 
-#### 4. And then onto [communicating with Baxter](http://sdk.rethinkrobotics.com/wiki/Hello_Baxter)
+#### 4. And then onto [communicating with Baxter](http://sdk.rethinkrobotics.com/wiki/Hello_Baxter).
 
 
 #### For instructions on running the 'Pick and Learn' demo, click [here](https://github.com/westpoint-robotics/usma_baxter/blob/master/pickAndLearn.md).
