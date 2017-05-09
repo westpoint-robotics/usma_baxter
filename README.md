@@ -14,7 +14,7 @@ Instructions on how to bringup the EECS Baxter robot
  
 2. Edit the hosts file and add baxter's IP address with its serial number(which is the hostname).
  - `gksu gedit /etc/hosts`
- - `169.254.11.86 011504P0022`
+ - `169.254.11.86   011504P0022`
  
 #### 3. You may now proceed to [Step 7](http://sdk.rethinkrobotics.com/wiki/Workstation_Setup) to verify your environment setup.
 
