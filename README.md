@@ -1,5 +1,5 @@
 # usma_baxter
-### Instructions on how to bringup the EECS Baxter robot
+### Instructions on how to setup a workstation and bringup the EECS Baxter robot
 
 #### 1. Follow instructions on [Rethink Robotics wiki](http://sdk.rethinkrobotics.com/wiki/Workstation_Setup) until Step 6
 
