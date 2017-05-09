@@ -1,5 +1,5 @@
 # usma_baxter
-Instructions on how to bringup the EECS Baxter robot
+### Instructions on how to bringup the EECS Baxter robot
 
 #### 1. Follow instructions on [Rethink Robotics wiki](http://sdk.rethinkrobotics.com/wiki/Workstation_Setup) until Step 6
 
@@ -21,4 +21,4 @@ Instructions on how to bringup the EECS Baxter robot
 #### 4. And then onto [communicating with Baxter](http://sdk.rethinkrobotics.com/wiki/Hello_Baxter)
 
 
-##### For instructions on running the 'Pick and Learn' demo, click [here](https://github.com/westpoint-robotics/usma_baxter/blob/master/pickAndLearn.md)
+#### For instructions on running the 'Pick and Learn' demo, click [here](https://github.com/westpoint-robotics/usma_baxter/blob/master/pickAndLearn.md)
