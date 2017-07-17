@@ -24,18 +24,18 @@
 #### For instructions on running the 'Pick and Learn' demo, click [here](https://github.com/westpoint-robotics/usma_baxter/blob/master/pickAndLearn.md).
 
 ### Some useful commands:
-1. If the sonar sensors are on when Baxter startsup you can turn them off with:
+1. If the sonar sensors are on when Baxter startsup you can turn them off with:  
 `rostopic pub /robot/sonar/head_sonar/set_sonars_enabled std_msgs/UInt16 0`
 
-2. To tuck Baxter's arm for storage: 
-  * Enable Baxter if not already enabled:
-  - `rosrun baxter_tools enable_robot.py -e`
-  * Send the command to tuck arms:
-  - `rosrun baxter_tools tuck_arms.py -t`
-  * To untuck the arms:
-  -`rosrun baxter_tools tuck_arms.py -u`
-  * To disable Baxter: 
-  - `rosrun baxter_tools enable_robot.py -e`
+2. To tuck Baxter's arm for storage:
+  * Enable Baxter if not already enabled:  
+  `rosrun baxter_tools enable_robot.py -e`
+  * Send the command to tuck arms:  
+   `rosrun baxter_tools tuck_arms.py -t`
+  * To untuck the arms:  
+  `rosrun baxter_tools tuck_arms.py -u`
+  * To disable Baxter:   
+   `rosrun baxter_tools enable_robot.py -e`
 
 
 
