@@ -29,13 +29,13 @@
 
 2. To tuck Baxter's arm for storage: 
   - Enable Baxter if not already enabled:
-  `rosrun baxter_tools enable_robot.py -e`
+  --`rosrun baxter_tools enable_robot.py -e`
   - Send the command to tuck arms:
-  `rosrun baxter_tools tuck_arms.py -t`
+  --`rosrun baxter_tools tuck_arms.py -t`
  - To untuck the arms:
-   `rosrun baxter_tools tuck_arms.py -u`
+   --`rosrun baxter_tools tuck_arms.py -u`
  - To disable Baxter: 
-  `rosrun baxter_tools enable_robot.py -e`
+  --`rosrun baxter_tools enable_robot.py -e`
 
 
 
