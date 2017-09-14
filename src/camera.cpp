@@ -56,6 +56,7 @@ pieces(highlight)
     std::cout << std::setw(80) << std::left << "Registering camera callback: ";
     it = new image_transport::ImageTransport(nh);
     is = it->subscribe("/cameras/right_hand_camera/image", 1, &Camera::callback, this);
+    ip= it->advertise("/robot/xdisplay", 1);
     if(is == NULL)
     {
         std::cout << std::right << "\033[1;31m[Failed]\033[0m" << std::endl;
@@ -130,6 +131,9 @@ void Camera::callback(const sensor_msgs::ImageConstPtr &msg)
     if(request_status == STATUS_IN_PROGRESS)
         request_status = STATUS_AVAILABLE;
     cv::imshow("Baxter Pick And Learn", cv_ptr->image);
+
+    sensor_msgs::ImagePtr img_msg = cv_bridge::CvImage(std_msgs::Header(), "bgr8", cv_ptr->image).toImageMsg();
+    ip.publish(img_msg);
     cv::waitKey(3);
 }
 

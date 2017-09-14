@@ -44,10 +44,15 @@ int main(int argc, char **argv)
     robot->release();
     robot->getPosition(startpos);
     robot->getOrientation(startorientation);
+    std::cout << "//////////////////////////////////////////////////Initial pos: " << startpos[0] <<" : " << startpos[1]<<" : " << startpos[2] << std::endl;
     while(learning)
     {
         std::cout << "In Learning State# " << state << std::endl; 
+
+                robot->getPosition(position);
+                robot->getOrientation(orientation);
         BaxterController::ITBInput input = robot->getInput();
+    std::cout << "//////////////////////////////////////////////////Initial pos: " << startpos[0] <<" : " << startpos[1]<<" : " << startpos[2] << std::endl;
         if(input == BaxterController::INPUT_HOME_CLICKED)
             learning = false;
         if(state == 0)
@@ -106,6 +111,7 @@ int main(int argc, char **argv)
         }
         else if(state == 1)
         {
+            //robot->moveTo(startpos, startorientation);
             if(robot->distanceToSetPosition() < 0.01)
             {
                 pass = 1;

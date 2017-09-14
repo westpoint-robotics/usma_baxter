@@ -58,6 +58,7 @@ private:
     baxter_core_msgs::CameraControl camera_control;
     image_transport::ImageTransport *it;
     image_transport::Subscriber is;
+    image_transport::Publisher ip;
     std::vector<std::vector<cv::Point> > contours, *request_result;
     std::vector<Piece> &pieces;
     int hmin, hmax, vmin, threshold1, threshold2, minarea;
