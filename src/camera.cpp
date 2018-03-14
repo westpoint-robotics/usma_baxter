@@ -56,7 +56,7 @@ pieces(highlight)
     std::cout << std::setw(80) << std::left << "Registering camera callback: ";
     it = new image_transport::ImageTransport(nh);
     is = it->subscribe("/cameras/right_hand_camera/image", 1, &Camera::callback, this);
-    ip= it->advertise("/robot/xdisplay", 1);
+    //ip= it->advertise("/robot/xdisplay", 1);
     if(is == NULL)
     {
         std::cout << std::right << "\033[1;31m[Failed]\033[0m" << std::endl;
