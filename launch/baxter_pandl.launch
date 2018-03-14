@@ -1,5 +1,6 @@
-<!--gps.launch-->
+<!--baxter pick and learn.launch-->
 <launch>
   <node name="pickandlearn" pkg="baxter_pickandlearn" type="pickandlearn" output="screen"/>
+  <node name="joy" pkg="joy" type="joy_node" output="screen"/>
 
 </launch>

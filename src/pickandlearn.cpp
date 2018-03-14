@@ -23,13 +23,25 @@ Copyright 2014 Charles Hubain <charles.hubain@haxelion.eu>
 #include "baxtercontroller.h"
 #include "camera.h"
 
+#include "sensor_msgs/Joy.h"
+
 #define MAX_PASS 4
+sensor_msgs::Joy::ConstPtr& joy;
+//joy->buttons[0] = 0;
+
+void joyCallback(const sensor_msgs::Joy::ConstPtr& msg)
+{
+  joy = msg;
+  //ROS_INFO("I heard: [%d]", msg->buttons[0]);
+}
+
 
 int main(int argc, char **argv) {
   // Initialise ROS
   ros::init(argc, argv, "baxter_pickandlearn");
   ros::NodeHandle nh;
   ros::AsyncSpinner spinner(1);
+  ros::Subscriber sub = nh.subscribe("joy", 1, joyCallback);
   spinner.start();
   BaxterController *robot = new BaxterController(nh);
   std::vector<Piece> pieces;
@@ -84,7 +96,7 @@ int main(int argc, char **argv) {
       }
       if (input == BaxterController::INPUT_HOME_CLICKED) {
         learning = false;
-        state = 0;
+        state = 8; //This is the do nothing state until button pressed.
       }
       // TODO tell baxter to put the arm in the current pos.
       robot->moveTo(position, orientation);
@@ -175,7 +187,7 @@ int main(int argc, char **argv) {
       }
     }
     
-    std::cout << "Learning: " << learning << ", state: " << state << ", reset: " << reset << std::endl;
+    std::cout << "Learning: " << learning << ", state: " << state << ", reset: " << reset << " button: " << buttons.buttons[0] << std::endl;
   }
   spinner.stop();
   delete robot;
