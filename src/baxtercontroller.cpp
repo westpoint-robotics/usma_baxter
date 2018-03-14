@@ -243,3 +243,15 @@ float BaxterController::distanceToSetPosition()
         d += (orientation[i]-set_orientation[i])*(orientation[i]-set_orientation[i]);
     return sqrt(d);
 }
+
+/*
+void BaxterController::moveLeftArm()
+{
+    joint_cmd.mode =  baxter_core_msgs::JointCommand::POSITION_MODE;
+    joint_cmd.names = {'left_e0', 'left_e1', 'left_s0', 'left_s1', 'left_w0', 'left_w1', 'left_w2'};
+    joint_cmd.command = srv.response.joints[1].position;
+
+        joint_pub.publish(joint_cmd);
+}
+*/
+
