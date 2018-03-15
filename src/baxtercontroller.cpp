@@ -181,6 +181,7 @@ void BaxterController::release()
     gripper_pub.publish(cmd);
 }
 
+// Returns 0 if success and 1 if not success
 int BaxterController::moveTo(float position[], float orientation[])
 {
     baxter_core_msgs::SolvePositionIK srv;
